@@ -2,17 +2,20 @@ const express = require('express');
 const cors = require('cors');
 const { v4: uuidv4 } = require('uuid');
 const bodyParser = require('body-parser');
-const low = require('lowdb');
-const FileSync = require('lowdb/adapters/FileSync');
 
 const app = express();
+const { createRequire } = require('module');
+const requireCommonJS = createRequire(import.meta.url);
+
+const low = requireCommonJS('lowdb');
+const FileSync = requireCommonJS('lowdb/adapters/FileSync');
+
+const adapter = new FileSync('db.json');
+const db = low(adapter);
 
 app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static('public'));
-
-const adapter = new FileSync('db.json');
-const db = low(adapter);
 
 db.defaults({ users: [] }).write();
 
