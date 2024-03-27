@@ -28,6 +28,12 @@ import('lowdb').then(lowdb => {
     // Route to add a user
     app.post("/addUser", (req, res) => {
         const { name, score } = req.body;
+    
+        if(!name || name.trim().length === 0){
+            res.json({ message: "Name cannot be empty" });
+            return;
+        };
+    
         const id = uuidv4(); // Using uuid directly here
         db.get("users").push({ id, name, score }).write();
         res.json({ message: "User added successfully" });
