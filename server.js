@@ -28,7 +28,6 @@ import('lowdb').then(lowdb => {
     // Route to add a user
     app.post("/addUser", (req, res) => {
         const { name, score } = req.body;
-        console.log('name:', name, 'score:', score);
         const id = uuidv4(); // Using uuid directly here
         db.get("users").push({ id, name, score }).write();
         res.json({ message: "User added successfully" });
@@ -37,7 +36,6 @@ import('lowdb').then(lowdb => {
     // Route to send user data
     app.post("/sendUser", (req, res) => {
         let data = db.get("users").value();
-        console.log(data);
         res.json(data); // Send user data as JSON response
     });
 
