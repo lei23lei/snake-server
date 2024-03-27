@@ -9,14 +9,26 @@
 <script defer src="bundle.js"></script></head>
 <body>
     <div id="main">
+        <div id="startPause">
+            <button id="showRanking" type="button" class="btn btn-success">Ranking</button>
+            <div>
+                <button id="start" type="button" class="hide btn btn-success">Start</button>
+                <button id="pause" type="button" class="btn btn-success">Pause</button>
+            </div>
+        </div>
         <div id="stage">
             <div id="snake">
                 <div></div>
             </div>
             <div class="hide" id="topList">
-
             </div>
-            <div></div>
+            <div id="showPause" class="hide">Pause</div>
+            <form id="nameForm" class="hide">
+                <label for="name">Snake hits itself</label>
+                <label for="name">Game Over.</label>
+                <input type="text" id="name"  placeholder="Enter your name">
+                <button id="submit" type="button" class="btn btn-success">Submit</button>
+            </form>            
             <div id="food">
                 <div></div>
                 <div></div>
