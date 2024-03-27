@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "id": "fcf1981c-a0f9-4d84-a852-6efe01b94424",
+      "name": "peter",
+      "score": 0
+    },
+    {
+      "id": "99b7c71f-c657-40ff-80c5-76f858e623be",
+      "name": "Mary",
+      "score": 2
+    },
+    {
+      "id": "d09546e5-0c60-417c-82dc-d670244e4650",
+      "name": "Peter",
+      "score": 2
+    },
+    {
+      "id": "206c0219-073f-4d56-bcd7-3a7fe2ac5255",
+      "name": null,
+      "score": 0
+    }
+  ]
+}

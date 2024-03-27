@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greedy snake</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="/src/favicon.ico">
+<script defer src="bundle.js"></script></head>
+<body>
+    <div id="main">
+        <div id="stage">
+            <div id="snake">
+                <div></div>
+            </div>
+            <div class="hide" id="topList">
+
+            </div>
+            <div></div>
+            <div id="food">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <div id="score-panel">
+            <div>
+                score: <span id="score">0</span>
+            </div>
+            <div>
+                level: <span id="level">1</span>
+            </div>
+        </div>
+        <div>
+            <button id="playAgain"  type="button" class="hide btn btn-success">Play Again</button>
+        </div>
+        <div id="control-panel">
+            <button  id="left" type="button" class="btn btn-success">Left</button>
+            <div id="updown">
+                <button id="up" type="button" class="btn btn-success">UP</button>
+                <button id="down" type="button" class="btn btn-success">Down</button>
+            </div>
+            <button id="right" type="button" class="btn btn-success">Right</button>
+        </div>
+
+    </div>
+</body>
+</html>
